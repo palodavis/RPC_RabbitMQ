@@ -1,0 +1,22 @@
+#1) Passo:
+- instalando o p*ka:
+pip install pika --break-system-packages
+
+#2) Rodar o docker do rabbit, mais fácil:
+
+# latest RabbitMQ 4.0.x
+docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:4.0-management
+
+#3) Verificar e acessar o Rabbit no localhost:
+http://localhost:15672/
+- user padrão:
+guest
+- senha padrão:
+guest
+
+#4) Executar:
+- rodar o comando do servidor:
+python3 rpc_server.py
+
+- depois rodar o comando do cliente:
+python3 rpc_client.py
